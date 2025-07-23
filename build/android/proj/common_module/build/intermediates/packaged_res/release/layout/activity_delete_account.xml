@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="#F2F2F2"
+        android:layout_height="match_parent" android:tag="layout/activity_delete_account_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_marginTop="13dp"
+            android:id="@+id/iv_desc"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_delete_account_desc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="11dp"
+            android:id="@+id/tv_confirm"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:text="申请注销"
+            android:textColor="@color/color_999999"
+            android:background="@drawable/tv_delete_account_unselected_bg"
+            app:layout_constraintTop_toBottomOf="@id/iv_desc"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="23dp"
+            android:layout_height="40dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_confirm"
+            android:text="申请注销需要阅读并同意上述《重要提示》"
+            android:textColor="#676767"
+            android:layout_marginTop="12dp"
+            android:id="@+id/tv_tips"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="20dp"
+            android:scaleType="centerInside"
+            android:id="@+id/iv_selected"
+            android:layout_marginEnd="3dp"
+            android:src="@drawable/ic_unselected_delete_account"
+            app:layout_constraintRight_toLeftOf="@id/tv_tips"
+            app:layout_constraintTop_toTopOf="@id/tv_tips"
+            app:layout_constraintBottom_toBottomOf="@id/tv_tips"
+            android:layout_height="20dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

@@ -1,0 +1,11 @@
+com.qq.e
+anim slide_right_in
+anim slide_up
+drawable gdt_ic_express_pause
+drawable gdt_ic_express_play
+integer min_screen_width_bucket
+string app_name
+style DialogAnimationRight
+style DialogAnimationUp
+style DialogFullScreen
+xml gdt_file_path

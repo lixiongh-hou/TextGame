@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="bd_activity_dialog_theme" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="bd_custom_notification_text" parent="android:TextAppearance.StatusBar.EventContent">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="bd_custom_notification_title" parent="android:TextAppearance.StatusBar.EventContent.Title"/>
+    <style name="bd_custom_progress_bar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/bd_progress_bar_horizontal_blue</item>
+        <item name="android:minHeight">3dp</item>
+        <item name="android:maxHeight">6dp</item>
+    </style>
+</resources>

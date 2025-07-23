@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="bd_custom_notification_text" parent="@android:style/TextAppearance.Material.Notification">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="bd_custom_notification_title" parent="@android:style/TextAppearance.Material.Notification.Title"/>
+</resources>

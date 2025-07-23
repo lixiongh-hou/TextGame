@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tt_mediation_gdt_developer_view_logo_tag_key" type="id"/>
+    <item name="tt_mediation_gdt_developer_view_root_tag_key" type="id"/>
+    <item name="tt_mediation_gdt_developer_view_tag_key" type="id"/>
+</resources>
