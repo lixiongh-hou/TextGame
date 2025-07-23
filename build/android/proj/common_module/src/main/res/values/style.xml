@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="customDialog" parent="@android:style/Theme.Dialog">
+        <!--是否有边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否有标题-->
+        <item name="android:windowNoTitle">false</item>
+        <!--背景颜色-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否浮动-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否允许背景变暗-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <!--是否透明的-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--动画-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <declare-styleable name="HeadView">
+        <!-- 标题 -->
+        <attr name="head_title" format="string" />
+        <!-- 右边文字显示 -->
+        <attr name="head_right_text" format="string" />
+        <!-- 左边文字显示 -->
+        <attr name="head_left_text" format="string" />
+        <!-- 右边文字显示颜色 -->
+        <attr name="head_right_text_color" format="reference" />
+        <!-- 左边图标显示 -->
+        <attr name="head_left_img" format="reference" />
+        <!-- 右边图标显示 -->
+        <attr name="head_right_img" format="reference" />
+
+        <attr name="head_title_color" format="reference" />
+    </declare-styleable>
+    <style name="customDialog2" parent="@android:style/Theme.Dialog">
+        <!--是否有边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否有标题-->
+        <item name="android:windowNoTitle">false</item>
+        <!--背景颜色-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否浮动-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否允许背景变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!--是否透明的-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--动画-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+    <style name="DownloadConfirmDialogFullScreen" parent="android:Theme.Dialog">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="DownloadConfirmDialogAnimationUp">
+        <item name="android:windowEnterAnimation">@anim/download_confirm_dialog_slide_up</item>
+    </style>
+    <style name="DownloadConfirmDialogAnimationRight">
+        <item name="android:windowEnterAnimation">@anim/download_confirm_dialog_slide_right_in</item>
+    </style>
+
+<!--    <!—配置下载删除弹窗的主题 默认为Theme.DeviceDefault.Light.Dialog" —>-->
+    <style name="Theme.Dialog.TTDownload" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+
+    <style name="roundedCornerStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="commonStyleDialog" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item><!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item> <!-- 无标题 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <!--弹出框周围模糊-->
+    <style name="style_dialog_fuzzy" parent="commonStyleDialog">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!--弹出框周围不模糊-->
+    <style name="style_dialog_no_fuzzy" parent="commonStyleDialog">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--中间弹窗框动画-->
+    <style name="DialogCentreAnim">
+        <item name="android:windowEnterAnimation">@anim/dialog_centre_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_centre_anim_exit</item>
+    </style>
+    <!--底部弹窗框动画-->
+    <style name="DialogBottomAnim">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_anim_exit</item>
+    </style>
+
+</resources>

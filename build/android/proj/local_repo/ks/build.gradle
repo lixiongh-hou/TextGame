@@ -1,0 +1,3 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('kssdk-ad-3.3.75.aar'))
+artifacts.add("default", file('mediation_ks_adapter_3.3.75.1.aar'))

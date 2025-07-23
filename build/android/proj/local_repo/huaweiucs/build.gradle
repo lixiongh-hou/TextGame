@@ -1,0 +1,4 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('ucs-common-1.0.4.312.aar'))
+artifacts.add("default", file('ucs-credential-developers-1.0.4.312.aar'))
+//artifacts.add("default", file('location-6.12.0.300.aar'))

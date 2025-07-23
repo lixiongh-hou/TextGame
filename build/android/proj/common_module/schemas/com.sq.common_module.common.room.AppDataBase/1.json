@@ -1,0 +1,46 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "3c959f4896bcb241626f5018118dcc79",
+    "entities": [
+      {
+        "tableName": "apple",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`appleId` INTEGER NOT NULL, `apple_name` TEXT NOT NULL, `apple_color` TEXT NOT NULL, PRIMARY KEY(`appleId`))",
+        "fields": [
+          {
+            "fieldPath": "appleId",
+            "columnName": "appleId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "appleName",
+            "columnName": "apple_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "appleColor",
+            "columnName": "apple_color",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "appleId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '3c959f4896bcb241626f5018118dcc79')"
+    ]
+  }
+}

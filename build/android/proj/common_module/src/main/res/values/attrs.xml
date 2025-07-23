@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--    圆形进度条-->
+    <declare-styleable name="CircularProgressView">
+        <attr name="backWidth" format="dimension" />    <!--背景圆环宽度-->
+        <attr name="progWidth" format="dimension" />    <!--进度圆环宽度-->
+        <attr name="backColor" format="color" />        <!--背景圆环颜色-->
+        <attr name="progColor" format="color" />        <!--进度圆环颜色-->
+        <attr name="progStartColor" format="color" />   <!--进度圆环开始颜色-->
+        <attr name="progFirstColor" format="color" />   <!--进度圆环结束颜色-->
+        <attr name="progress" format="integer" />       <!--圆环进度-->
+        <attr name="starting" format="integer" />       <!--起始点-->
+    </declare-styleable>
+
+    <declare-styleable name="ApertureViewGroup">
+        <!--     边框颜色使用background="" 代替   -->
+        <!--  边框宽度 -->
+        <attr name="aperture_border_width" format="dimension" />
+        <!--  边框角度  -->
+        <attr name="aperture_border_angle" format="dimension" />
+
+        <!--      渐变颜色1  -->
+        <attr name="aperture_color1" format="color" />
+
+        <!--      渐变颜色1  -->
+        <attr name="aperture_color2" format="color" />
+
+        <!--    中间颜色    -->
+        <attr name="aperture_middle_color" format="color" />
+
+        <!--   光圈执行速度     -->
+        <attr name="aperture_duration" format="integer" />
+
+    </declare-styleable>
+    <declare-styleable name="UserItemView">
+        <attr name="userTitleContent" format="string" />
+        <attr name="mineLeftImage" format="integer|reference" />
+        <attr name="itemLineVisible" format="boolean" />
+        <attr name="itemTitleColor" format="color" />
+        <attr name="userRightImage" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RulerView">
+        <attr name="ruler_textColor" format="color" />-->
+        <attr name="ruler_textSize" format="dimension" />
+        <attr name="ruler_lineColor" format="color" />
+        <attr name="ruler_lineSpaceWidth" format="dimension" />
+        <attr name="ruler_lineWidth" format="dimension" />
+        <attr name="ruler_lineMaxHeight" format="dimension" />
+        <attr name="ruler_lineMidHeight" format="dimension" />
+        <attr name="ruler_lineMinHeight" format="dimension" />
+        <attr name="ruler_textMarginTop" format="dimension" />
+        <attr name="ruler_alphaEnable" format="boolean" />
+        <attr name="ruler_minValue" format="float" />
+        <attr name="ruler_maxValue" format="float" />
+        <attr name="ruler_selectorValue" format="float" />
+        <attr name="ruler_perValue" format="float" />
+    </declare-styleable>
+
+
+    <declare-styleable name="NoticeView">
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:duration" />
+        <attr name="android:delay" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTabItem">
+        <attr name="tab_text_color" format="color|reference" />
+        <attr name="tab_icon" format="color|reference" />
+        <attr name="tab_text" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomNavView">
+        <attr name="nav_is_white" format="boolean" />
+        <attr name="nav_text" format="string|reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="LuckyDrawUpView">
+        <attr name="lucky_select_res" format="color|reference" />
+        <attr name="lucky_unselect_res" format="color|reference" />
+        <attr name="lucky_mid_res" format="color|reference" />
+        <attr name="lucky_select_color" format="color" />
+        <attr name="lucky_unselect_color" format="color" />
+        <attr name="lucky_mid_color" format="color" />
+
+        <attr name="lucky_select_left_top_res" format="color|reference" />
+        <attr name="lucky_unselect_left_top_res" format="color|reference" />
+
+        <attr name="lucky_select_right_top_res" format="color|reference" />
+        <attr name="lucky_unselect_right_top_res" format="color|reference" />
+
+        <attr name="lucky_select_left_bottom_res" format="color|reference" />
+        <attr name="lucky_unselect_left_bottom_res" format="color|reference" />
+
+        <attr name="lucky_select_right_bottom_res" format="color|reference" />
+        <attr name="lucky_unselect_right_bottom_res" format="color|reference" />
+
+        <attr name="lucky_is_huawei" format="boolean" />
+
+    </declare-styleable>
+
+    <declare-styleable name="RoundCornerProgressBar">
+        <attr name="rcpb_stroke_width" format="dimension" />
+        <attr name="rcpb_stroke_color" format="color" />
+        <attr name="rcpb_progress_color" format="color" />
+        <attr name="rcpb_progress" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="MyProgressView">
+        <!--进度颜色-->
+        <attr name="myProgressColor" format="reference|color" />
+        <attr name="myProgressWidth" format="reference|dimension" />
+        <attr name="myProgressHeight" format="reference|dimension" />
+        <!--当前进度-->
+        <attr name="current_progress" format="integer" />
+        <!--最大进度-->
+        <attr name="max_progress" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MyProgressViewRound">
+        <!--进度颜色-->
+        <attr name="myProgressColorRound" format="reference|color" />
+        <attr name="myProgressWidthRound" format="reference|dimension" />
+        <attr name="myProgressHeightRound" format="reference|dimension" />
+        <!--当前进度-->
+        <attr name="current_progressRound" format="integer" />
+        <!--最大进度-->
+        <attr name="max_progressRound" format="integer" />
+        <attr name="my_progress_color_background" format="reference|color" />
+
+        <attr name="myProgressRippleRound" format="reference|color" />
+        <attr name="myStartProgressColorRound" format="reference|color" />
+        <attr name="myEndProgressColorRound" format="reference|color" />
+        <attr name="my_gradient_directionRound" format="integer" />
+        // -1 无渐变 1 上下 2 左右
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomNineTaskItem">
+        <attr name="nineTaskProgressBg" format="reference|color" />
+        <attr name="nineTaskProgressMax" format="integer" />
+        <attr name="nineTaskProgressLabelColor" format="reference|color" />
+        <attr name="nineTaskButtonBg" format="reference|color" />
+        <attr name="nineTaskShowProgress" format="boolean" />
+        <attr name="nineTaskTitle" format="string" />
+    </declare-styleable>
+</resources>

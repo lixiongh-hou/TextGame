@@ -1,0 +1,219 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-parcelize'
+}
+
+android {
+    compileSdk rootProject.ext.android["compileSdkVersion"]
+    namespace 'com.sq.common_module'
+    defaultConfig {
+        minSdk rootProject.ext.android["minSdkVersion"]
+        targetSdk rootProject.ext.android["targetSdkVersion"]
+
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        //阿里路由配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation":
+                                      "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+    }
+    kotlin {
+        experimental {
+            coroutines 'enable'
+        }
+    }
+}
+
+dependencies {
+    api rootProject.ext.dependencies.BackgroundLibrary
+    api rootProject.ext.dependencies.ktx
+    api rootProject.ext.dependencies.appcompat
+    api rootProject.ext.dependencies.material
+    testApi rootProject.ext.dependencies.junit
+    androidTestApi rootProject.ext.dependencies.testExtJunit
+    androidTestApi rootProject.ext.dependencies.espressorCore
+    api rootProject.ext.dependencies.recyclerView
+    api rootProject.ext.dependencies.cardview
+
+    //hilt
+    api rootProject.ext.dependencies.hiltViewModel
+    api rootProject.ext.dependencies.hiltDaggerAndroid
+    kapt rootProject.ext.dependencies.hiltCompiler
+    kapt rootProject.ext.dependencies.HiltDaggerCompiler
+
+    //glide
+    api rootProject.ext.dependencies.glide
+    kapt rootProject.ext.dependencies.glideCompiler
+
+    //ktx
+    api rootProject.ext.dependencies.lifecyclerViewModel
+    api rootProject.ext.dependencies.lifecyclerLivedata
+    api rootProject.ext.dependencies.lifecycleRuntime
+    api rootProject.ext.dependencies.lifecyclerViewModelSavedstate
+    api rootProject.ext.dependencies.activityKtx
+    api rootProject.ext.dependencies.fragmentKtx
+    api rootProject.ext.dependencies.collectionKtx
+
+    //retrofit
+    api rootProject.ext.dependencies.retrofit
+    api rootProject.ext.dependencies.retrofitConverterGson
+    api rootProject.ext.dependencies.retrofitCoroutinesAdapter
+    api rootProject.ext.dependencies.retrofitAdapterRxjava
+    api rootProject.ext.dependencies.loggingInterceptor
+    api rootProject.ext.dependencies.rxjava
+    api rootProject.ext.dependencies.rxAndroid
+    api rootProject.ext.dependencies.rxKotlin
+
+    //refresh
+    api rootProject.ext.dependencies.refreshLayout
+    api rootProject.ext.dependencies.refreshClassicHeader
+    api rootProject.ext.dependencies.refreshClassiceFooter
+    api rootProject.ext.dependencies.refreshMaterialHeader
+    api rootProject.ext.dependencies.baseRecyclerViewAdapter
+
+    //常用三方工具
+    api rootProject.ext.dependencies.mmkv
+    api rootProject.ext.dependencies.multidex
+    api rootProject.ext.dependencies.agentWeb
+//    api rootProject.ext.dependencies.autosize
+    api rootProject.ext.dependencies.eventBus
+    api rootProject.ext.dependencies.banner
+//    api rootProject.ext.dependencies.magicIndicator
+    api rootProject.ext.dependencies.blankj
+    api rootProject.ext.dependencies.lottie
+
+//    api rootProject.ext.dependencies.Huaweilocation
+
+    //room
+//    api rootProject.ext.dependencies.room
+//    api rootProject.ext.dependencies.roomKtx
+//    kapt rootProject.ext.dependencies.roomComplier
+
+    //阿里路由
+    api rootProject.ext.dependencies.aliArouter
+    kapt rootProject.ext.dependencies.aliCompiler
+
+    api project(path: ':local_repo:open_ad')
+    //百度
+    api project(path: ':local_repo:baidu')
+    api project(path: ':local_repo:gdt')
+    api project(path: ':local_repo:ks')
+//    //gromore
+//    api "com.pangle.cn:mediation-sdk:6.1.2.5"  //融合SDK
+
+//    api "com.pangle.cn:mediation-ks-adapter:3.3.57.0"//ks adapter
+//
+//    api "com.pangle.cn:mediation-gdt-adapter:4.562.1432.0" //gdt adapter
+
+
+//    api project(path: ':local_repo:gdt')
+//    api project(path: ':local_repo:ks')
+//    api project(path: ':local_repo:oaid')
+//    api project(path: ':local_repo:open_ad')
+//    api project(path: ':local_repo:ksTools')
+//    api project(path: ':local_repo:gromoreTools')
+
+
+    //工具类
+//    api rootProject.ext.dependencies.pickerView
+
+    //微信支付
+    api rootProject.ext.dependencies.wxPay
+    //阿里授权登录
+    api project(path: ':local_repo:alilogin')
+//保活
+//    api project(path: ':local_repo:keepAlive')
+
+    api rootProject.ext.dependencies.svga
+    api rootProject.ext.dependencies.gifDrawable
+
+//    api 'com.github.Chen-Xi-g:AudioPlay:v1.1.0'
+
+    api rootProject.ext.dependencies.kotlinCoroutinesCore
+    api rootProject.ext.dependencies.kotlinCoroutinesAndroid
+
+    api 'com.tencent.bugly:crashreport:latest.release'
+//    api 'com.aliyun.ams:alicloud-android-hotfix:3.3.5'
+    api rootProject.ext.dependencies.OAID
+
+//    api 'com.taobao.android:update-main:1.1.15-open'
+
+//    api rootProject.ext.dependencies.filedownloader
+//    api rootProject.ext.dependencies.zxing
+//    debugApi 'com.squareup.leakcanary:leakcanary-android:2.7'
+
+    //hook
+//    api 'com.github.tiann:epic:0.11.2'
+//    api 'com.github.tiann:epic:0.11.2@aar'
+
+    //增长参谋
+
+//    api 'com.bytedance.applog:RangersAppLog-Lite-cn:6.14.2'
+    //埋点开发工具
+//    debugApi 'com.bytedance.applog:RangersAppLog-DevTools:2.2.3'
+
+    //保活
+//    api 'com.aliyun.daemon:ch_com.xy.mrcd:1.0.3'
+//    api "com.github.tiann:FreeReflection:3.1.0"
+
+    //风控
+    api(rootProject.ext.dependencies.tdrisks) {
+//        // 移除后sdk不获取安装包列表
+        exclude group: 'com.trustdecision.android', module: 'packagelist'
+//        exclude group: 'com.trustdecision.android', module: 'packagelist'
+//        // 移除后sdk不会收集READ_PHONE_STATE相关信息
+//        exclude group: 'com.trustdecision.android', module: 'readphone'
+//        // 移除后sdk不会收集地理位置相关信息
+//        exclude group: 'com.trustdecision.android', module: 'location'
+//        // 移除后sdk不会收集传感器相关信息
+        exclude group: 'com.trustdecision.android', module: 'sensor'
+//        // 移除后sdk不会收集wifi相关信息
+        exclude group: 'com.trustdecision.android', module: 'wifiinfo'
+    }
+
+//    api 'com.github.liangjingkanji:Tooltip:1.2.3'
+    api 'com.github.getActivity:Toaster:12.5'
+
+    api 'com.umeng.umsdk:common:9.7.9'// 必选
+    api 'com.umeng.umsdk:asms:1.8.4'// 必选
+
+//    api 'com.umeng.umsdk:abtest:1.0.0'//使用U-App中ABTest能力，可选
+//友盟监控
+    api 'com.umeng.umsdk:apm:1.9.12' // U-APM包依赖(必选)
+
+
+}
+
+kapt {
+    correctErrorTypes true
+}

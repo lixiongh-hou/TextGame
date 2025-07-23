@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/welcome">
+
+        <com.sq.common_module.common.widget.MyProgressView
+            android:id="@+id/my_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="90dp"
+            app:max_progress="100"
+            app:myProgressColor="#4BA8FF"
+            app:myProgressHeight="12dp"
+            app:myProgressWidth="224dp" />
+
+        <!--        <ProgressBar-->
+        <!--            android:id="@+id/progress_splash"-->
+        <!--            style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+        <!--            android:layout_width="224dp"-->
+        <!--            android:layout_height="12dp"-->
+        <!--            android:layout_gravity="center_horizontal|bottom"-->
+        <!--            android:layout_marginBottom="90dp"-->
+        <!--            android:max="60000"-->
+        <!--            android:progress="0"-->
+        <!--            android:progressDrawable="@drawable/progressbar_splash" />-->
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="115dp"
+            android:alpha="0.6"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:visibility="invisible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bottom_splash"
+            android:layout_width="148dp"
+            android:layout_height="49dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="23dp"
+            android:src="@mipmap/ic_splash_bottom"
+            android:visibility="invisible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="40dp"
+            android:alpha="0.6"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:visibility="invisible" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_appname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="150dp"
+            android:gravity="center"
+            android:text="WiFi万能密码"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="120dp" />
+
+        <FrameLayout
+            android:id="@+id/splash_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+    </FrameLayout>
+</layout>

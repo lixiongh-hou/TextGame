@@ -1,0 +1,4 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('GDTSDK.unionNormal.4.630.1500.aar'))
+artifacts.add("default", file('mediation_gdt_adapter_4.630.1500.1.aar'))
+//artifacts.add("default", file('GDTSDK.unionNormal.4.562.1432.aar'))

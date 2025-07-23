@@ -1,0 +1,157 @@
+-ignorewarnings
+
+-keepattributes *Annotation*
+-keepattributes Exceptions
+-keepattributes InnerClasses
+-keepattributes Signature
+# Gson需要的规则 start
+-keepclassmembers,allowobfuscation class * {
+  @com.google.gson.annotations.SerializedName <fields>;
+}
+# Gson需要的规则 end
+
+# =========================a_riemann_arservice  start========================
+-keep class com.huawei.location.activity.DownLoadFileBean$*{*; }
+-keep class com.huawei.location.activity.RiemannSoftArService{*; }
+# =========================a_riemann_arservice  end========================
+
+
+# =========================b_entity  begin========================
+-keep public class com.huawei.hms.support.api.entity.location.** { *; }
+-keep public class com.huawei.hms.location.** {*; }
+-keep public class com.huawei.hms.support.api.location.common.** { *;}
+# =========================b_entity  end========================
+
+# =========================b_common  begin========================
+# 该相关类，在现网有返回被混淆成抽象类，导致出现crash，做keep保护
+-keep class * extends com.huawei.location.lite.common.config.ConfigBaseResponse { *; }
+-keep class com.huawei.location.lite.common.config.ConfigBaseResponse{*; }
+# =========================b_common  end========================
+
+# =========================b_location_base  begin========================
+-keep public class com.huawei.location.base.activity.**{*;}
+-keep public class com.huawei.location.base.activity.callback.*
+-keep public class com.huawei.location.base.activity.constant.**{*; }
+-keep public class com.huawei.location.base.activity.entity.*
+# =========================b_location_base  end========================
+
+# =========================b_router  begin========================
+-keep public class com.huawei.location.router.** { *; }
+-keep class * extends com.huawei.location.router.BaseRouterTaskCallImpl{ *; }
+# =========================b_router  end========================
+
+# =========================p_location  begin========================
+-keep class * extends com.huawei.hms.core.aidl.IMessageEntity{ *; }
+-keep public class com.huawei.location.nlp.network.** {*; }
+-keep class com.huawei.location.resp.LocationAvailabilityInfo{ *; }
+-keep class com.huawei.location.service.BackGroundService{ *; }
+# =========================p_location  end========================
+
+# =========================SDM_location  begin========================
+# 黎曼库需要添加，不能删除
+-keep class com.huawei.riemann.location.bean.** { *; }
+-keep class com.huawei.riemann.location.bean.eph.** { *; }
+-keep public class com.huawei.riemann.common.api.location.SdmLocationClient { *; }
+-keep public class com.huawei.riemann.common.api.location.CityTileCallback { *; }
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+# 黎曼库需要添加，不能删除
+# TODO修改反射 可以删除com.huawei.location.sdm.Sdm的keep
+-keep public class com.huawei.location.sdm.Sdm {
+    public boolean support(long, float);
+    public void request(com.huawei.location.sdm.SdmListener);
+    public void remove(com.huawei.location.sdm.SdmListener);
+ }
+# =========================SDM_location  end========================
+
+# =========================vdr_location  begin========================
+# 黎曼库需要添加，不能删除
+-keep class com.huawei.location.vdr.VdrManager{ *; }
+-keep class com.huawei.location.vdr.control.VDRControl{ *; }
+-keep class com.huawei.location.vdr.listener.IVdrLocationListener{ *; }
+-keep class com.huawei.riemann.gnsslocation.core.bean.** { *; }
+-keep class com.huawei.riemann.gnsslocation.api.sdm.** { *; }
+-keep class com.huawei.riemann.gnsslocation.api.vdr.** { *; }
+# =========================vdr_location  end========================
+
+-keep class com.huawei.location.lite.common.http.sign.tss.CertifiedCredential{*; }
+-keep class com.huawei.location.lite.common.plug.ProductId{*; }
+-keep class com.huawei.location.lite.common.http.HttpService{*; }
+-keep class * extends com.huawei.location.lite.common.http.response.BaseResponse{*; }
+-keep class com.huawei.location.lite.common.http.response.BaseResponse{*; }
+-keep class com.huawei.location.lite.common.util.filedownload.DownLoadFileBean$*{*; }
+-keep class com.huawei.location.lite.common.** implements android.os.Parcelable { *; }
+##---------------Begin: proguard configuration for Gson for fixed 	DTS2021110823683 ----------
+# Gson uses generic type information stored in a class file when working with fields. Proguard
+# removes such information by default, so configure it to keep all of it.
+-keepattributes Signature
+
+# For using GSON @Expose annotation
+-keepattributes *Annotation*
+
+# Gson specific classes
+-dontwarn sun.misc.**
+#-keep class com.google.gson.stream.** { *; }
+
+# Application classes that will be serialized/deserialized over Gson
+-keep class com.huawei.location.lite.common.report.ReportBuilder{*; }
+
+# Prevent proguard from stripping interface information from TypeAdapter, TypeAdapterFactory,
+# JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)
+-keep class * extends com.google.gson.TypeAdapter
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer
+-keep class * implements com.google.gson.JsonDeserializer
+
+# Prevent R8 from leaving Data object members always null
+-keepclassmembers,allowobfuscation class * {
+  @com.google.gson.annotations.SerializedName <fields>;
+}
+
+# Retain generic signatures of TypeToken and its subclasses with R8 version 3.0 and higher.
+
+
+
+
+
+
+-keep class com.huawei.location.lite.common.http.sign.tss.CertifiedCredential{*; }
+-keep class com.huawei.location.lite.common.plug.ProductId{*; }
+-keep class com.huawei.location.lite.common.http.HttpService{*; }
+-keep class * extends com.huawei.location.lite.common.http.response.BaseResponse{*; }
+-keep class com.huawei.location.lite.common.http.response.BaseResponse{*; }
+-keep class com.huawei.location.lite.common.util.filedownload.DownLoadFileBean$*{*; }
+-keep class com.huawei.location.lite.common.** implements android.os.Parcelable { *; }
+##---------------Begin: proguard configuration for Gson for fixed 	DTS2021110823683 ----------
+# Gson uses generic type information stored in a class file when working with fields. Proguard
+# removes such information by default, so configure it to keep all of it.
+-keepattributes Signature
+
+# For using GSON @Expose annotation
+-keepattributes *Annotation*
+
+# Gson specific classes
+-dontwarn sun.misc.**
+#-keep class com.google.gson.stream.** { *; }
+
+# Application classes that will be serialized/deserialized over Gson
+-keep class com.huawei.location.lite.common.report.ReportBuilder{*; }
+
+# Prevent proguard from stripping interface information from TypeAdapter, TypeAdapterFactory,
+# JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)
+-keep class * extends com.google.gson.TypeAdapter
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer
+-keep class * implements com.google.gson.JsonDeserializer
+
+# Prevent R8 from leaving Data object members always null
+-keepclassmembers,allowobfuscation class * {
+  @com.google.gson.annotations.SerializedName <fields>;
+}
+
+# Retain generic signatures of TypeToken and its subclasses with R8 version 3.0 and higher.
+
+
+
+

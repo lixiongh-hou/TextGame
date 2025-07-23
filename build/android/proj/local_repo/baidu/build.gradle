@@ -1,0 +1,3 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('Baidu_MobAds_SDK_v9.37.aar'))
+artifacts.add("default", file('mediation_baidu_adapter_9.37.4.aar'))

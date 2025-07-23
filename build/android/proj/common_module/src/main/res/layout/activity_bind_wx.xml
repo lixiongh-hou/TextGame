@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/ic_wx_to_login"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_logo" />
+
+        <LinearLayout
+            android:id="@+id/ll_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/iv_confirm">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_check"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginEnd="11dp"
+                android:src="@drawable/ic_wx_unchecked" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="同意"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="勾选即表示已经阅读并同意
+"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:id="@+id/tv_1"
+            android:layout_marginTop="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_check" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/tv_1"
+            app:layout_constraintTop_toBottomOf="@id/tv_1"
+            android:text="《用户协议》"
+            android:id="@+id/tv_user_policy"
+            android:textColor="#0078FF"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/tv_1"
+            app:layout_constraintTop_toTopOf="@id/tv_user_policy"
+            android:text="《隐私政策》"
+            android:textSize="14sp"
+            android:textColor="#0078FF"
+            android:id="@+id/tv_app_privacy"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/tv_1"
+            app:layout_constraintRight_toRightOf="@id/tv_1"
+            app:layout_constraintTop_toTopOf="@id/tv_user_policy"
+            android:text="与"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

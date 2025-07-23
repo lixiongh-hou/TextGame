@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huawei.location.core"
+    android:versionCode="212000300"
+    android:versionName="2.12.0.300" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="33" />
+
+    <!-- 用途：连接网络 涉及模块：所有特性通用 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 用途：访问网络状态（网络定位使用） 涉及模块：融合定位、室内室外定位、地理围栏、众包、SDM -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用途：精确位置权限 涉及模块：融合定位、室内室外定位、地理围栏、众包、SDM -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用途：访问WLAN状态（网络定位使用） 涉及模块：融合定位、室内室外定位、地理围栏、众包 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 用途：改变WLAN状态的开关（网络定位使用） 涉及模块：融合定位、室内室外定位、地理围栏、众包 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application>
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:com.huawei.hms:location:location"
+            android:value="1" />
+    </application>
+
+</manifest>
