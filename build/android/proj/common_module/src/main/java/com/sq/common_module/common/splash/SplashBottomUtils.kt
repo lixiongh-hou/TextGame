@@ -34,7 +34,7 @@ object SplashBottomUtils {
         myProgress = progress
         when (HttpHeaderUtils.appCode) {
 
-            "470000" -> handle470000()
+            "999999" -> handle470000()
         }
     }
 

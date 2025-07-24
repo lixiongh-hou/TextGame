@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import okhttp3.ResponseBody;
 import retrofit2.Converter;
 
-class MyGsonResponseBodyConverter<T> implements Converter<ResponseBody,T> {
+class MyGsonResponseBodyConverter<T> implements Converter<ResponseBody, T> {
     private final Gson gson;
     private final Type type;
 
@@ -24,14 +24,15 @@ class MyGsonResponseBodyConverter<T> implements Converter<ResponseBody,T> {
     public T convert(ResponseBody value) throws IOException {
         String response = value.string();
         try {
+            new BaseResult<>();
             BaseResult<?> baseBean = gson.fromJson(response, BaseResult.class);
-            if (baseBean.getCode()!=0) {
+            if (baseBean.getCode() != 0) {
                 ArrayList<String> strings = new ArrayList<>();
-                throw new ErrorResult(baseBean.getCode(),strings,baseBean.getMsg());
+                throw new ErrorResult(baseBean.getCode(), strings, baseBean.getMsg());
             }
-            return gson.fromJson(response,type);
+            return gson.fromJson(response, type);
 
-        }finally {
+        } finally {
             value.close();
         }
     }

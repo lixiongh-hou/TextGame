@@ -19,7 +19,7 @@ abstract class BaseObserver<T> : Observer<BaseResult<T>> {
         t?.let {
             when (it.code) {
                 0 -> {
-                    onSuccess(it.data)
+                    onSuccess(it.data as T)
                 }
             }
         }

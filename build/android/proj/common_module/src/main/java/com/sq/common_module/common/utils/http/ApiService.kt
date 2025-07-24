@@ -29,6 +29,10 @@ interface ApiService {
     @POST("v1/login/submit")
     fun toLogin(): Observable<BaseResult<LoginBean>>
 
+    //登录
+    @POST("v1/login/submit")
+    fun toLogin1(): Observable<Any>
+
     //模糊搜索企业
     @POST("v1/enterprise/getCompany")
     fun getCompany(@Body body: RequestBody): Observable<BaseResult<List<CompanyBean>>>

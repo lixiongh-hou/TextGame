@@ -4,6 +4,8 @@ import android.util.Log;
 
 import com.blankj.utilcode.util.AppUtils;
 
+import okhttp3.logging.HttpLoggingInterceptor;
+
 /**
  * Log统一管理类
  */

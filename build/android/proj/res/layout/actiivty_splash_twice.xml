@@ -19,7 +19,7 @@
             android:elevation="@dimen/dp_2"
             android:textColor="@color/splash_id"
             android:textSize="@dimen/sp_15"
-            tools:text="123456" />
+            android:text="123456" />
 
         <com.sq.common_module.common.widget.rounde.RoundCornerProgressBar
             android:id="@+id/my_progress"

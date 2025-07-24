@@ -211,7 +211,8 @@ dependencies {
 //友盟监控
     api 'com.umeng.umsdk:apm:1.9.12' // U-APM包依赖(必选)
 
-
+    api 'com.github.liangjingkanji:Net-okhttp3:3.6.4'
+    api 'com.alibaba:fastjson:2.0.28'
 }
 
 kapt {

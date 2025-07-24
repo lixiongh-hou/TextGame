@@ -63,4 +63,15 @@
 
 <!--    <string name="shorcuts_one">100元红包</string>-->
 <!--    <string name="shorcuts_two">红包提现</string>-->
+
+
+    <string name="netword_error">Network error</string>
+    <string name="analysis_error">Parsing error</string>
+    <string name="connect_error">Connection failed</string>
+    <string name="ssl_veriy_error">Certificate verification failed</string>
+    <string name="connect_time_out">Connection timed out</string>
+    <string name="connect_over_limit">Connection timed out</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="sessionid_no_exist">SESSIONID_NO_EXIST</string>
+    <string name="sessionid_no_exist_1">SESSIONID_NO_EXIST</string>
 </resources>

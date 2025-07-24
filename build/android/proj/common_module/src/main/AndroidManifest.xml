@@ -80,6 +80,9 @@
             android:name=".common.ui.BackToForegroundActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
+
+
+
         <provider
             android:name=".common.update.VersionFileProvider"
             android:authorities="${applicationId}.provider"

@@ -22,7 +22,10 @@ import javax.inject.Inject
  * Date :  2023/8/14
  * Time : 15:50
  */
-class TTSplashAdUtils @Inject constructor(private val syncAdInfoUtils: SyncAdInfoUtils) {
+class TTSplashAdUtils @Inject constructor(
+    private val syncAdInfoUtils: SyncAdInfoUtils,
+    private val trackEventUtils: TrackEventUtils,
+) {
     private var TAG = TTSplashAdUtils::class.simpleName
     private var timeDate = ""
     private var mSplashBack: SplashAdInterface? = null
@@ -41,14 +44,11 @@ class TTSplashAdUtils @Inject constructor(private val syncAdInfoUtils: SyncAdInf
     private var mActivity: Activity? = null
     private var isLoadSplash = false
 
-    @Inject
-    lateinit var trackEventUtils: TrackEventUtils
-
     fun loadTTSplashAd(
         activity: Activity,
         container: FrameLayout,
         adId: String,
-        splashBack: SplashAdInterface
+        splashBack: SplashAdInterface,
     ) {
         AdRequestLimitUtils.requestSystemRisk(ADType.SPLASH_AD) { splashId ->
             mActivity = activity
